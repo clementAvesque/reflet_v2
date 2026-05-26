@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("../font/Satoshi-Variable.ttf") format("truetype");
+}
+
+:root {
+  --white: white;
+  --black: black;
+  --grey-dark: #494949;
+  --orange: #FF8C00;
+  --green: #45AF55;
+  --light-green: #7CFA8F;
+  --orange: #F28F17;
+  --h1-size: clamp(3rem, 4rem, 6rem);
+  --h2-size: clamp(3rem, 3.5rem, 5rem);
+  --text-size: clamp(1rem, 1rem, 2.5rem);
+}
+
+html {
+  font-family: "Satoshi";
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}

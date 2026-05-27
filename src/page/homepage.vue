@@ -58,17 +58,21 @@ export default {
             <p>{{ value.text }}</p>
         </div>
     </section>
-    <section>
+    <section id="solution">
         <div>
+            <p>03</p>
             <h2>Notre solution : <br> Reflet.</h2>
-            <p>Reflet accompagne chaque matin vers plus d'autonomie grâce à la technologie,à l'audio et à un design
-                inclusif.</p>
-
+            <p>Une armoire connectée qui identifie les vêtements, annonce les couleurs et propose des associations adaptées à vos envie. </p>
+            <div>
+                <img src="/solution_icon/audio.svg" alt="image de notre équipe">
+                <div>
+                    <h3>coucou</h3>
+                    <p>text</p>
+                </div>
+            </div>
         </div>
         <div>
-            <canvas>
-
-            </canvas>
+           <img src="/team.png" alt="">
         </div>
     </section>
 </template>
@@ -87,25 +91,81 @@ export default {
     }
 }
 
+.bubble{
+    text-align: center;
+}
+
+#solution div div div{
+    display: flex;
+    flex-direction: column;
+}
+
+#solution div div img{
+    height: 10%;
+
+}
+
+#solution div div div h3 {
+    margin: 5px;
+    padding: 0;
+}
+
+#solution div div div p{
+    margin: 5px;
+    padding: 0;
+}
+
+#solution div div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#solution div p{
+    width: 50%;
+}
+
+#solution div {
+    width: 40%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#solution{
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
 h2 {
     font-size: var(--h2-size);
     margin: 5px 0px;
 }
 
 #presentation div div {
+    
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     width: 100%;
 }
 
+section{
+    padding: 5% 10%;
+}
+
 #problematique {
-    background-color: var(--orange);
+    color: var(--white);
+    background-color: var(--secondary-color);
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    padding: 30px 0%;
+    justify-content: flex-start;
+    gap: 9%;
 }
 
 #problematique img {
@@ -138,9 +198,10 @@ h2 {
 
 
 #presentation {
+    color: var(--primary-color) !important;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 80%;
     height: 90vh;
 }
 
@@ -151,7 +212,6 @@ h2 {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 5%;
 }
 
 #presentation p {
@@ -160,6 +220,5 @@ h2 {
 
 h1 {
     font-size: var(--h1-size);
-    color: var(--black);
 }
 </style>

@@ -222,7 +222,7 @@ export default {
 </template>
 
 
-<style>
+<style scoped>
 @keyframes bubbleAppear {
     from {
         opacity: 0;

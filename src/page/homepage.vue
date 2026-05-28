@@ -102,9 +102,7 @@ export default {
             </div>
         </div>
         <div>
-            <canvas>
-
-            </canvas>
+            <img src="/armoire.svg" alt="image de l'armoir">
         </div>
     </section>
     <section id="problematique">
@@ -212,7 +210,8 @@ export default {
         <div>
             <p style="align-self:flex-start;">08</p>
             <h2>un impact positif au quotidien</h2>
-            <p>Reflet c'est bien plus qu'une armoire : c'est un pas vers plus d'indépendance, de confiance et de liberté.</p>
+            <p>Reflet c'est bien plus qu'une armoire : c'est un pas vers plus d'indépendance, de confiance et de
+                liberté.</p>
         </div>
         <div v-for="(value, index) in impact" :key="index" class="bubble">
             <img :src="value.icon" :alt="value.alt">

@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .btn {
   padding: 10px 20px;
   border: none;
@@ -28,6 +28,11 @@ export default {
   cursor: pointer;
   font-size: 1rem;
   transition: all 0.3s ease;
+}
+
+.btn.terciere {
+  background-color: var(--secondary-color);
+
 }
 
 .btn:hover {
@@ -39,12 +44,12 @@ export default {
 }
 
 .btn.primary {
-  background-color: #333;
+  background-color: var(--primary-color);
   color: white;
 }
 
 .btn.primary:hover {
-  background-color: #555;
+  background-color: white;
 }
 
 .btn.secondary {

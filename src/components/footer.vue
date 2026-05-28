@@ -36,9 +36,15 @@
                 <h4>Nous contacter</h4>
                 <p><a href="mailto:hello@reflet-project.com">hello@reflet-project.com</a></p>
                 <div class="social-icons">
-                    <a href="#" class="social-icon"></a>
-                    <a href="#" class="social-icon"></a>
-                    <a href="#" class="social-icon"></a>
+                    <a href="#" class="social-icon">
+                      <img src="/RS/ig.svg" alt="Twitter" style="width: 16px; height: 16px;">
+                    </a>
+                    <a href="#" class="social-icon">
+                      <img src="/RS/Youtube.svg" alt="Facebook" style="width: 16px; height: 16px;">
+                    </a>
+                    <a href="#" class="social-icon">
+                      <img src="/RS/Twitter.svg" alt="Instagram" style="width: 16px; height: 16px;">
+                    </a>
                 </div>
             </div>
         </div>
@@ -47,7 +53,7 @@
 </template>
 <style scoped>
 #footer {
-  background-image: url('/bckgrnd-footer.svg');
+  background-image: url('/bg_footer.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

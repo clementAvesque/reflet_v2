@@ -102,7 +102,7 @@ export default {
             </div>
         </div>
         <div>
-            <img src="/armoire.svg" alt="image de l'armoir">
+            <img src="/armoire.png" alt="image de l'armoir" style="width: 100%; height: auto;">
         </div>
     </section>
     <section id="problematique">
@@ -153,15 +153,15 @@ export default {
             </div>
             <div>
                 <h3>Identification</h3>
-                <p> Reflet identifie le vêtement et annonce sa couleur.</p>
+                <p> L'armoire analyse la couleur et le type de vêtement.</p>
             </div>
             <div>
                 <h3>Association</h3>
-                <p> Reflet propose des associations adaptées à vos envies.</p>
+                <p> Reflet annonce la couleur et propose des associations</p>
             </div>
             <div>
                 <h3>Rangement</h3>
-                <p> Reflet vous guide pour ranger vos vêtements.</p>
+                <p> L'utilisateur valide sa tenue en toute autonomie.</p>
             </div>
         </div>
     </section>
@@ -181,7 +181,7 @@ export default {
             <p>06</p>
             <h2>Un design pensé pour tous.</h2>
             <p>Chaque détail à été pensé pour offrir une experience simple, intuitive et accssible.</p>
-            <Button variant="secondary" Text_value="Découvrir notre démarche" />
+            <Button variant="terciere" Text_value="Découvrir notre démarche" />
         </div>
         <div style="display: flex;width: 50%; gap: 20px;">
             <img src="/demarche_img/visage.png" alt="image de notre démarche"

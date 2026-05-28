@@ -26,7 +26,7 @@ console.log(props.Text_value)
 }
 
 .btn-primary {
-    background-color: var(--black);
+    background-color: var(--primary-color);
     color: white;
 }
 

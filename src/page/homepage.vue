@@ -186,10 +186,8 @@ export default {
             <Button variant="terciere" Text_value="Découvrir notre démarche" />
         </div>
         <div style="display: flex;width: 50%; gap: 20px;">
-            <img src="/demarche_img/visage.png" alt="image de notre démarche"
-                style="; height: auto; justify-self: flex-start; align-self: flex-start;">
-            <img src="/demarche_img/armoire.png" alt="image de l'armoire"
-                style=" height: auto; justify-self: flex-end; align-self: flex-end;">
+            <img src="/demarche_img/visage.png" alt="image de notre démarche" style="height: auto; justify-self: flex-start; align-self: flex-start;">
+            <img src="/demarche_img/armoire.svg" alt="image de l'armoire" style=" height: auto; justify-self: flex-end; align-self: flex-end;">
         </div>
     </section>
     <section id="video-section">

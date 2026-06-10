@@ -5,7 +5,7 @@
         <div class="footer-content">
             <div class="footer-section footer-logo">
                 <div class="logo-container">
-                    <img src="/logo_footer.svg" alt="Logo Reflet" class="footer-logo-img">
+                    <img src="/logo.svg" alt="Logo Reflet" class="footer-logo-img">
                 </div>
                 <p>Projet de fin d'année DNMADE<br>Salima, Clément, Tristan, Nathan, Angélique</p>
             </div>
@@ -36,15 +36,10 @@
                 <h4>Nous contacter</h4>
                 <p><a href="mailto:hello@reflet-project.com">hello@reflet-project.com</a></p>
                 <div class="social-icons">
-                    <a href="#" class="social-icon">
-                      <img src="/RS/ig.svg" alt="Twitter" style="width: 16px; height: 16px;">
-                    </a>
-                    <a href="#" class="social-icon">
-                      <img src="/RS/Youtube.svg" alt="Facebook" style="width: 16px; height: 16px;">
-                    </a>
-                    <a href="#" class="social-icon">
-                      <img src="/RS/Twitter.svg" alt="Instagram" style="width: 16px; height: 16px;">
-                    </a>
+                      <img src="/RS/ig.svg" alt="Twitter" style="width: 32px; height: 32px;">
+                      <img src="/RS/Youtube.svg" alt="Facebook" style="width: 32px; height: 32px;">
+                      <img src="/RS/Twitter.svg" alt="Instagram" style="width: 32px; height: 32px;">
+
                 </div>
             </div>
         </div>
@@ -53,6 +48,7 @@
 </template>
 <style scoped>
 #footer {
+  background-image: url('/bg_footer.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -110,7 +106,7 @@
 }
 
 .footer-logo-img {
-  width: 200px;
+  width: 150px;
   height: 150px;
   object-fit: contain;
 }

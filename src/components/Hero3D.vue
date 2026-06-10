@@ -17,7 +17,7 @@ onMounted(() => {
   containerRef.value.appendChild(renderer.domElement)
 
   const scene = new THREE.Scene()
-  const camera = new THREE.PerspectiveCamera(45, containerRef.value.clientWidth / containerRef.value.clientHeight, 0.1, 100)
+  const camera = new THREE.PerspectiveCamera(25, containerRef.value.clientWidth / containerRef.value.clientHeight, 0.1, 100)
   camera.position.set(4.5, 0.5, 5)
   camera.lookAt(0, 0, 0)
 

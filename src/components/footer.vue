@@ -5,7 +5,7 @@
         <div class="footer-content">
             <div class="footer-section footer-logo">
                 <div class="logo-container">
-                    <img src="/logo.svg" alt="Logo Reflet" class="footer-logo-img">
+                    <img src="/logo_footer.svg" alt="Logo Reflet" class="footer-logo-img">
                 </div>
                 <p>Projet de fin d'année DNMADE<br>Salima, Clément, Tristan, Nathan, Angélique</p>
             </div>
@@ -53,7 +53,6 @@
 </template>
 <style scoped>
 #footer {
-  background-image: url('/bg_footer.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -111,7 +110,7 @@
 }
 
 .footer-logo-img {
-  width: 150px;
+  width: 200px;
   height: 150px;
   object-fit: contain;
 }

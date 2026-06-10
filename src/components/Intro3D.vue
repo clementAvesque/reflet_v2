@@ -175,8 +175,8 @@ onMounted(() => {
   <div id="intro" :class="{ hidden }">
     <canvas id="intro-canvas"></canvas>
     <div id="intro-content">
-      <div id="intro-logo">R<span>E</span>F<span>LE</span>T</div>
-      <div id="intro-sub">Une armoire connectée pensée pour vous</div>
+      <div id="intro-logo">R<span>EFLE</span>T</div>
+      <div id="intro-sub">Une demande simple, une tenue déjà prête</div>
       <div id="intro-bar"><div id="intro-bar-fill"></div></div>
     </div>
   </div>

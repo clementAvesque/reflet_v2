@@ -175,7 +175,7 @@ onMounted(() => {
   <div id="intro" :class="{ hidden }">
     <canvas id="intro-canvas"></canvas>
     <div id="intro-content">
-      <div id="intro-logo">R<span>EFLE</span>T</div>
+      <div id="intro-logo"><span>REFLET</span></div>
       <div id="intro-sub">Une demande simple, une tenue déjà prête</div>
       <div id="intro-bar"><div id="intro-bar-fill"></div></div>
     </div>
@@ -225,7 +225,7 @@ onMounted(() => {
 }
 
 #intro-logo span {
-  color: #7CFA8F;
+  color: var(--primary-color);
 }
 
 #intro-sub {

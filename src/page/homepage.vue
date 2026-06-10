@@ -1,10 +1,12 @@
 <script>
 import { ref } from 'vue'
 import Button from '../../components/Button.vue'
+import Hero3D from '../components/Hero3D.vue'
 
 export default {
     components: {
-        Button
+        Button,
+        Hero3D
     },
     setup() {
         const problematique = ref([
@@ -102,7 +104,7 @@ export default {
             </div>
         </div>
         <div>
-            <img src="/armoire.png" alt="image de l'armoir" style="width: 100%; height: auto;">
+            <Hero3D />
         </div>
     </section>
     <section id="problematique">

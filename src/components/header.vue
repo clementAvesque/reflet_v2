@@ -173,7 +173,7 @@ const handleNavClick = (path) => {
     flex-wrap: wrap;
     gap: 1rem;
   }
-  
+
   .nav-menu {
     order: 3;
     width: 100%;
@@ -181,18 +181,53 @@ const handleNavClick = (path) => {
     margin: 0;
     justify-content: flex-start;
   }
-  
+
   .nav-item {
     font-size: 0.85rem;
   }
-  
+
   .header-actions {
     gap: 0.5rem;
   }
-  
+
   .btn-primary {
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0.75rem 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .logo-icon {
+    height: 32px;
+  }
+
+  .nav-menu {
+    gap: 0.5rem;
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    order: 3;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .nav-item {
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .header-actions {
+    gap: 0.25rem;
+  }
+
+  .btn-primary {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
   }
 }
 </style>

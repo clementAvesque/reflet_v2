@@ -36,10 +36,15 @@
                 <h4>Nous contacter</h4>
                 <p><a href="mailto:hello@reflet-project.com">hello@reflet-project.com</a></p>
                 <div class="social-icons">
-                      <img src="/RS/ig.svg" alt="Twitter" style="width: 32px; height: 32px;">
-                      <img src="/RS/Youtube.svg" alt="Facebook" style="width: 32px; height: 32px;">
-                      <img src="/RS/Twitter.svg" alt="Instagram" style="width: 32px; height: 32px;">
-
+                    <a href="#" class="social-icon">
+                      <img src="/RS/ig.svg" alt="Twitter" style="width: 16px; height: 16px;">
+                    </a>
+                    <a href="#" class="social-icon">
+                      <img src="/RS/Youtube.svg" alt="Facebook" style="width: 16px; height: 16px;">
+                    </a>
+                    <a href="#" class="social-icon">
+                      <img src="/RS/Twitter.svg" alt="Instagram" style="width: 16px; height: 16px;">
+                    </a>
                 </div>
             </div>
         </div>

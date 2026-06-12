@@ -19,7 +19,7 @@ onMounted(() => {
   const scene = new THREE.Scene()
   const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100)
   camera.position.set(0.8, 0.3, 2.2)
-  camera.lookAt(0, 0, 0)
+  camera.lookAt(-1.5, 0, 0)
 
   // Lumières
   scene.add(new THREE.AmbientLight(0xfff8f0, 0.55))
@@ -142,7 +142,7 @@ onMounted(() => {
         const p = easeInOut((introTime - PHASE2) / (PHASE3 - PHASE2))
         camera.position.z = 2.2 - p * 0.8
         camera.position.y = 0.3 + p * 0.4
-        camera.lookAt(0, p * 0.4, 0)
+        camera.lookAt(-1.5, p * 0.4, 0)
 
         particles.forEach(pt => { pt.material.opacity *= 0.97 })
 

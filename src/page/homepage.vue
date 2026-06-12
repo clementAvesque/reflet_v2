@@ -95,7 +95,7 @@ export default {
 <template>
     <section id="presentation">
         <div>
-            <h1>Une armoire connectée pensée pour les personnes aveugle</h1>
+            <h1>Une armoire connectée pensée pour les déficients visuels</h1>
             <p>Reflet accompagne chaque matin vers plus d'autonomie grâce à la technologie,à l'audio et à un design
                 inclusif.</p>
             <div>
@@ -199,7 +199,7 @@ export default {
                 <Button variant="primary" Text_value="Voir la vidéo" />
             </div>
             <div class="video-container">
-                <iframe width="100%" height="50%" src="https://www.youtube.com/embed/VIDEO_ID"
+                <iframe width="100%" height="50%" src="https://www.youtube.com/embed/GikYXguqB6c?si=kMKSdXiw0JipGyPc"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
@@ -472,7 +472,6 @@ section {
     display: flex;
     flex-direction: row;
     width: 80%;
-    height: 90vh;
 }
 
 #presentation div {

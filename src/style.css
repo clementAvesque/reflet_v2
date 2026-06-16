@@ -1,26 +1,31 @@
 @font-face {
-  font-family: "Satoshi";
-  src: url("../font/Satoshi-Variable.ttf") format("truetype");
+  font-family: "Syne-R";
+  src: url("../font/Syne-Regular.otf") format("truetype");
 }
+
+@font-face {
+  font-family: "Syne-B";
+  src: url("../font/Syne-Bold.otf") format("truetype");
+  font-weight: 700;
+}
+
+
 
 :root {
   --white: white;
   --black: black;
 
-  --grey-dark: #494949;
-  --orange: #FF8C00;
-  --green: #45AF55;
-  --light-green: #7CFA8F;
-  --orange: #F28F17;
-  --primary-color: #467948;
-  --secondary-color: #73BB86;
-  --h1-size: clamp(2rem, 5vw, 6rem);
-  --h2-size: clamp(1.8rem, 4vw, 5rem);
-  --text-size: clamp(0.9rem, 2vw, 2.5rem);
+  --primary-color: #282A17;
+  --secondary-color: #337839;
+  --third-color: #B3CE50;
+  --h1-size: clamp(2rem, 3.5vw, 6rem);
+  --h2-size: clamp(1.8rem, 2.5vw, 5rem);
+  --h3-size: clamp(0.8rem, 1.5vw, 4rem);
+  --text-size: clamp(0.5rem, 1vw, 2rem);
 }
 
 html {
-  font-family: "Satoshi";
+  font-family: "Syne-R";
   scroll-behavior: smooth;
 }
 
@@ -28,6 +33,11 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+h1 & h2  {
+  font-family: "Syne-B";
+  margin: 0;
 }
 
 section {

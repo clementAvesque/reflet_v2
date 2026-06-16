@@ -25,7 +25,7 @@ const handleNavClick = (path) => {
 </script>
 
 <template>
-  <header class="header">
+  <header class="header"">
     <div class="header-container">
       <!-- Logo -->
       <div class="logo">
@@ -112,7 +112,7 @@ const handleNavClick = (path) => {
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
+  background-color: var(--third-color);
   color: var(--white);
   border: none;
   padding: 0.75rem 1.5rem;
@@ -124,7 +124,7 @@ const handleNavClick = (path) => {
 }
 
 .btn-primary:hover {
-  background-color: #0f2d52;
+  background-color: var(--secondary-color);
   transform: translateY(-2px);
 }
 

@@ -1,23 +1,30 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 
 const containerRef = ref(null)
-const isHovering = ref(false)
 const isDragging = ref(false)
 
-onMounted(() => {
+let renderer = null
+let animationId = null
+
+onMounted(async () => {
   if (!containerRef.value) return
 
-  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true })
+  await nextTick()
+
+  const w = containerRef.value.clientWidth
+  const h = containerRef.value.clientHeight
+
+  renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true })
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
   renderer.shadowMap.enabled = true
-  renderer.setSize(containerRef.value.clientWidth, containerRef.value.clientHeight)
+  renderer.setSize(w, h)
   containerRef.value.appendChild(renderer.domElement)
 
   const scene = new THREE.Scene()
-  const camera = new THREE.PerspectiveCamera(25, containerRef.value.clientWidth / containerRef.value.clientHeight, 0.1, 100)
+  const camera = new THREE.PerspectiveCamera(23, w / h, 0.1, 100)
   camera.position.set(4.5, 0.5, 5)
   camera.lookAt(0, 0, 0)
 
@@ -41,22 +48,16 @@ onMounted(() => {
     model = gltf.scene
     model.scale.setScalar(2.5)
     scene.add(model)
+    handleResize()
   })
 
   // Contrôles de souris
-  let mouseX = 0
-  let mouseY = 0
   let targetRotationX = 0
   let targetRotationY = 0
 
   const canvas = renderer.domElement
 
-  canvas.addEventListener('mouseenter', () => {
-    isHovering.value = true
-  })
-
   canvas.addEventListener('mouseleave', () => {
-    isHovering.value = false
     isDragging.value = false
   })
 
@@ -80,18 +81,14 @@ onMounted(() => {
   })
 
   // Animation
-  let animationId = null
-
   function animate() {
     animationId = requestAnimationFrame(animate)
 
     if (model) {
-      // Smooth rotation
       if (isDragging.value) {
         model.rotation.y += (targetRotationY - model.rotation.y) * 0.1
         model.rotation.x += (targetRotationX - model.rotation.x) * 0.1
       } else {
-        // Rotation automatique quand pas de drag
         model.rotation.y += 0.005
       }
     }
@@ -112,12 +109,12 @@ onMounted(() => {
   }
 
   window.addEventListener('resize', handleResize)
+})
 
-  return () => {
-    window.removeEventListener('resize', handleResize)
-    cancelAnimationFrame(animationId)
-    renderer.dispose()
-  }
+onUnmounted(() => {
+  cancelAnimationFrame(animationId)
+  renderer?.dispose()
+  window.removeEventListener('resize', handleResize)
 })
 </script>
 
@@ -133,11 +130,9 @@ onMounted(() => {
 .hero-3d-container {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 500px;
+  display: block;
   cursor: grab;
-  transition: cursor 0.2s;
 }
 
 .hero-3d-container.dragging {

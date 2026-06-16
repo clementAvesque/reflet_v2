@@ -2,11 +2,14 @@
 import { ref } from 'vue'
 import Button from '../../components/Button.vue'
 import Hero3D from '../components/Hero3D.vue'
+import { RouterLink } from 'vue-router'
+
 
 export default {
     components: {
         Button,
-        Hero3D
+        Hero3D,
+        RouterLink
     },
     setup() {
         const problematique = ref([
@@ -46,7 +49,7 @@ export default {
             {
                 "background": "card_fonctionnality/color.svg",
                 "title": "Reconnaissance des couleurs",
-                "text": "Reflet identifie les vêtements grâce à une caméra intégrée et annonce leur couleur."
+                "text": "Identification précise des couleurs"
             },
             {
                 "background": "card_fonctionnality/vocal.svg",
@@ -61,12 +64,12 @@ export default {
             {
                 "background": "card_fonctionnality/detection.svg",
                 "title": "Détection de vêtements",
-                "text": "Classification automatique des habtis."
+                "text": "Classification automatique des habits."
             },
             {
-                "background": "card_fonctionnality/accessibility.svg",
-                "title": "Accessibilité complète",
-                "text": "Pensé pour être utilisé par tous."
+                "background": "card_fonctionnality/meteo.svg",
+                "title": "S'adapte à la météo",
+                "text": "suggestion de tenue en fonction de la météo"
             }
         ])
 
@@ -88,14 +91,28 @@ export default {
             }
         ])
 
-        return { problematique, solution, cards, impact }
+
+        const actualité = ref([
+            {
+                "icon": "/actu/ig.svg",
+                "title": "Instagram",
+                "alt": "icon d'instagram"
+            },
+            {
+                "icon": "/actu/ytb.svg",
+                "title": "Youtube",
+                "alt": "icon de reconnaissance de couleur"
+            },
+        ])
+
+        return { problematique, solution, cards, impact, actualité }
     }
 }
 </script>
 <template>
     <section id="presentation">
         <div>
-            <h1>Une armoire connectée pensée pour les déficients visuels</h1>
+            <h1>Une armoire connectée pensée pour vous</h1>
             <p>Reflet accompagne chaque matin vers plus d'autonomie grâce à la technologie,à l'audio et à un design
                 inclusif.</p>
             <div>
@@ -122,10 +139,10 @@ export default {
     <section id="solution">
         <div>
             <p>03</p>
-            <h2>Notre solution : <br> Reflet.</h2>
+            <h2 style="color: var(--primary-color);">Notre solution : <br> Reflet.</h2>
             <p>Une armoire connectée qui identifie les vêtements, annonce les couleurs et propose des associations
                 adaptées à vos envie. </p>
-            <div style="display: flex; flex-direction: column;  gap: 10px; height: 20%;margin-top:10%;" class="bubble">
+            <div style="display: flex; flex-direction: column;  gap: 50px; height: 20%;margin-top:10%;" class="bubble">
                 <div v-for="(value, index) in solution" :key="index"
                     style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
                     <img :src="value.icon" :alt="value.alt">
@@ -137,7 +154,7 @@ export default {
             </div>
         </div>
         <div>
-            <img src="/team.png" alt="image de notre équipe" id="team">
+            <img src="/armoire_solution.svg" alt="image de notre équipe" id="team">
         </div>
     </section>
     <section id="fonctionnement">
@@ -167,45 +184,58 @@ export default {
             </div>
         </div>
     </section>
-    <section id="fonctionnalité">
-        <p>05</p>
-        <h2>Fonctionnalités principales</h2>
-        <div id="cards-container">
-            <div v-for="(card, index) in cards" :key="index" class="card"
-                :style="{ backgroundImage: `url(${card.background})` }">
-                <h3>{{ card.title }}</h3>
-                <p>{{ card.text }}</p>
+    <div style="position: relative;">
+        <section id="fonctionnalité">
+            <p>05</p>
+            <h2>Fonctionnalités principales</h2>
+            <div id="cards-container">
+                <div v-for="(card, index) in cards" :key="index" class="card"
+                    :style="{ backgroundImage: `url(${card.background})` }">
+                    <h3>{{ card.title }}</h3>
+                    <p>{{ card.text }}</p>
+                </div>
             </div>
-        </div>
-    </section>
-    <section id="démarche">
-        <div class="text_démarche">
-            <p>06</p>
-            <h2>Un design pensé pour tous.</h2>
-            <p>Chaque détail à été pensé pour offrir une experience simple, intuitive et accssible.</p>
-            <Button variant="terciere" Text_value="Découvrir notre démarche" />
-        </div>
-        <div style="display: flex;width: 50%; gap: 20px;">
-            <img src="/demarche_img/visage.png" alt="image de notre démarche" style="height: auto; justify-self: flex-start; align-self: flex-start;">
-            <img src="/demarche_img/armoire.svg" alt="image de l'armoire" style=" height: auto; justify-self: flex-end; align-self: flex-end;">
-        </div>
-    </section>
-    <section id="video-section">
-        <div class="video-content">
+
+
+        </section>
+        <img src="/bg_last.svg" alt="image de notre équipe" id="bg_last">
+
+        <section id="démarche">
             <div class="text_démarche">
-                <p>07</p>
-                <h2>Voir Reflet en action</h2>
-                <p>Découvrez le prototype et imaginez un quotidien plus autonome.</p>
-                <Button variant="primary" Text_value="Voir la vidéo" />
+                <p>06</p>
+                <h2>Un design pensé pour tous.</h2>
+                <p>Chaque détail à été pensé pour offrir une experience simple, intuitive et accssible.</p>
+                <Button variant="terciere" Text_value="Découvrir notre démarche" />
             </div>
-            <div class="video-container">
-                <iframe width="100%" height="50%" src="https://www.youtube.com/embed/GikYXguqB6c?si=kMKSdXiw0JipGyPc"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+            <div style="display: flex;width: 70%;">
+                <img style="width: 100%;" src="/cards_pres.svg" alt="image de notre équipe">
             </div>
-        </div>
-    </section>
+        </section>
+        <section id="video-section">
+            <div class="video-content">
+                <div class="text_démarche">
+                    <p>07</p>
+                    <h2>Retrouvez toutes nos actualités</h2>
+                    <p>Restez informé des nouveautés sur nos réseaux sociaux</p>
+                    <div style="display: flex; flex-direction: column;gap: 20px; height: 20%;margin-top:10%;"
+                        class="bubble">
+                        <div v-for="(value, index) in actualité" :key="index"
+                            style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+                            <img :src="value.icon" :alt="value.alt">
+                            <div>
+                                <h3>{{ value.title }}</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <Button variant="primary" Text_value="+ D'actualités" />
+                </div>
+                <div class="video-container">
+                    <img src="/post_insta.svg" alt="image de notre équipe">
+                </div>
+
+            </div>
+        </section>
+    </div>
     <section id="problematique">
         <div>
             <p style="align-self:flex-start;">08</p>
@@ -219,10 +249,33 @@ export default {
             <p>{{ value.alt }}</p>
         </div>
     </section>
+    <section
+        style=" background-image: url('/bg_cta.svg'); background-size: 110% 300%; background-position: -0% 80%; background-repeat: no-repeat; padding: 5% 10%; display: flex; flex-direction: column; gap: 50px;">
+        <div class="video-content" style="display: flex; justify-content: space-between;">
+            <div class="text_démarche" style=" align-self: flex-start; gap: 50px;">
+                <p>09</p>
+                <h2>Venez testez par vous même.</h2>
+                <p>Découvrez Reflet ainsi que sa personnalisation au complet</p>
+                <RouterLink to="/personnalisation" style="text-decoration: none;">
+                    <Button variant="primary" Text_value="Venez refletez votre style" />
+                </RouterLink>
+            </div>
+            <img src="/armoire_cta.svg" alt="image de notre équipe" style="width: 30vw;">
+        </div>
+    </section>
+
 </template>
 
 
 <style scoped>
+#bg_last {
+    width: 100%;
+    position: absolute;
+    bottom: -35%;
+    left: 0;
+    z-index: -1;
+}
+
 @keyframes bubbleAppear {
     from {
         opacity: 0;
@@ -250,13 +303,16 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 40%;
+    min-width: 40%;
 }
 
 #démarche {
     background-color: var(--primary-color);
     display: flex;
-    flex-direction: row !important;
+    flex-direction: row-reverse;
+    margin: 0px 5%;
+    border-radius: 30px;
+    gap: 50px;
 }
 
 #démarche div img {
@@ -334,7 +390,7 @@ export default {
 }
 
 #fonctionnement {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: var(--white);
 }
 
@@ -346,9 +402,9 @@ export default {
 
 #solution div #team {
     align-self: flex-start;
-    margin-top: 30%;
-    margin-left: 10%;
-    height: 70%;
+    margin-top: 16%;
+    margin-left: 30%;
+    height: 100%;
 }
 
 #solution div div div {
@@ -386,7 +442,7 @@ export default {
     flex-wrap: nowrap;
     min-width: 20vw;
     gap: 10px;
-    align-items: center;
+    align-items: flex-start !important;
     width: fit-content;
 }
 
@@ -396,15 +452,17 @@ export default {
 
 #solution div {
     width: 40%;
-    height: 80vh;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: -6.25%;
 }
 
 #solution {
-    background-color: var(--primary-color);
-    color: white;
+    background-image: url('/bg_solution.svg');
+    background-size: 300% 300%;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -414,6 +472,7 @@ export default {
 
 h2 {
     font-size: var(--h2-size);
+    color: var(--third-color);
     margin: 5px 0px;
 }
 
@@ -431,7 +490,7 @@ section {
 
 #problematique {
     color: var(--white);
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -468,18 +527,27 @@ section {
 
 
 #presentation {
+    background-image: url('/bg_pres.svg');
+    background-size: 100% 170%;
+    background-position: 100% 0%;
+    background-repeat: no-repeat;
     color: var(--primary-color) !important;
     display: flex;
     flex-direction: row;
+    align-items: stretch;
+    height: 50vh;
     width: 80%;
 }
 
 #presentation div {
+    height: fit-content;
+    min-height: 150px;
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100%;
     gap: 10px;
 }
 
@@ -489,6 +557,7 @@ section {
 
 h1 {
     font-size: var(--h1-size);
+    color: var(--secondary-color);
 }
 
 #fonctionnalité {
@@ -563,14 +632,9 @@ h1 {
     gap: 50px;
 }
 
-.video-container {
-    margin-left: 200px;
-    width: 50%;
-    aspect-ratio: 16 / 9;
-    background-color: #d3d3d3;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.video-container img {
+    margin-left: 10vw;
+
 }
 
 .video-container iframe {

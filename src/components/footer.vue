@@ -1,7 +1,7 @@
 <script>
 </script>
 <template>
-        <footer id="footer">
+        <footer>
         <div class="footer-content">
             <div class="footer-section footer-logo">
                 <div class="logo-container">
@@ -34,17 +34,11 @@
 
             <div class="footer-section">
                 <h4>Nous contacter</h4>
-                <p><a href="mailto:hello@reflet-project.com">hello@reflet-project.com</a></p>
+                <p><a href="mailto:hello@reflet-project.com" style="color: var(--third-color);">hello@reflet-project.com</a></p>
                 <div class="social-icons">
-                    <a href="#" class="social-icon">
-                      <img src="/RS/ig.svg" alt="Twitter" style="width: 16px; height: 16px;">
-                    </a>
-                    <a href="#" class="social-icon">
-                      <img src="/RS/Youtube.svg" alt="Facebook" style="width: 16px; height: 16px;">
-                    </a>
-                    <a href="#" class="social-icon">
-                      <img src="/RS/Twitter.svg" alt="Instagram" style="width: 16px; height: 16px;">
-                    </a>
+                      <img src="/RS/ig.svg" alt="Twitter" style="width: 32px; height: 32px;">
+                      <img src="/RS/Youtube.svg" alt="Facebook" style="width: 32px; height: 32px;">
+                      <img src="/RS/Twitter.svg" alt="Instagram" style="width: 32px; height: 32px;">
                 </div>
             </div>
         </div>
@@ -52,8 +46,9 @@
 
 </template>
 <style scoped>
-#footer {
-  background-image: url('/bg_footer.svg');
+footer {
+  border-top: 1px solid var(--third-color);
+  background-color: var(--white);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

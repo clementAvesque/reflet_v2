@@ -47,7 +47,7 @@ const handleNavClick = (path) => {
 
       <!-- Action Buttons -->
       <div class="header-actions">
-        <button class="btn-primary">Découvrir le prototype</button>
+        <button class="btn-primary">Achetez Reflet</button>
 
       </div>
     </div>

@@ -91,7 +91,7 @@ const handleNavClick = (path) => {
   flex: 1;
   justify-content: center;
   margin: 0 2rem;
-  color: var(--third-color);
+  color: var(--first-color);
 }
 
 .nav-item {

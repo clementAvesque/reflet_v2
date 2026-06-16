@@ -1,7 +1,7 @@
 <script>
 </script>
 <template>
-        <footer>
+        <footer style="background-color: #E7F1E2;">
         <div class="footer-content">
             <div class="footer-section footer-logo">
                 <div class="logo-container">

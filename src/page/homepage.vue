@@ -486,6 +486,8 @@ h2 {
 
 section {
     padding: 5% 10%;
+    background-color: #E7F1E2;
+    
 }
 
 #problematique {
@@ -556,6 +558,7 @@ section {
 }
 
 h1 {
+    font-family: "Syne-B";
     font-size: var(--h1-size);
     color: var(--secondary-color);
 }

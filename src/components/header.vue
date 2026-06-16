@@ -25,7 +25,7 @@ const handleNavClick = (path) => {
 </script>
 
 <template>
-  <header class="header"">
+  <header class="header">
     <div class="header-container">
       <!-- Logo -->
       <div class="logo">

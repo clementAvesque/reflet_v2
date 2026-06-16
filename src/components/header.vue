@@ -61,6 +61,7 @@ const handleNavClick = (path) => {
   position: sticky;
   top: 0;
   z-index: 100;
+  background-color:#E7F1E2;
 }
 
 .header-container {
@@ -90,6 +91,7 @@ const handleNavClick = (path) => {
   flex: 1;
   justify-content: center;
   margin: 0 2rem;
+  color: var(--third-color);
 }
 
 .nav-item {
